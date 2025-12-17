@@ -77,7 +77,7 @@
                     <div class="form-success" id="formSuccess">
                         <i class="fas fa-check-circle"></i> Thank you for your message! I will get back to you soon.
                     </div>
-                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/xyzwpjnv" method="POST">
+                    <form id="contactForm" class="contact-form" action="https://formspree.io/f/mwpggzvv" method="POST">
                         <div class="form-group">
                             <label for="name">Name</label>
                             <input type="text" id="name" name="name" required>
@@ -167,66 +167,54 @@
         </div>
     </footer>
 
-    <script src="js/main.js"></script>
     <script>
-        // Contact Form Validation and Submission
-        document.addEventListener('DOMContentLoaded', function() {
-            const contactForm = document.getElementById('contactForm');
-            const formSuccess = document.getElementById('formSuccess');
-            
-            contactForm.addEventListener('submit', function(e) {
-                e.preventDefault();
-                
-                // Get form values
-                const name = document.getElementById('name').value.trim();
-                const email = document.getElementById('email').value.trim();
-                const subject = document.getElementById('subject').value.trim();
-                const message = document.getElementById('message').value.trim();
-                
-                // Basic validation
-                if (name === '' || email === '' || subject === '' || message === '') {
-                    alert('Please fill in all fields');
-                    return;
-                }
-                
-                // Email validation
-                const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-                if (!emailRegex.test(email)) {
-                    alert('Please enter a valid email address');
-                    return;
-                }
-                
-                // If validation passes, submit the form
-                const formData = new FormData(contactForm);
-                
-                // Using Formspree service to send the email
-                fetch('https://formspree.io/f/sbndabhijeet@gmail.com', {
+    document.addEventListener('DOMContentLoaded', function () {
+        const contactForm = document.getElementById('contactForm');
+        const formSuccess = document.getElementById('formSuccess');
+
+        contactForm.addEventListener('submit', async function (e) {
+            e.preventDefault();
+
+            const name = document.getElementById('name').value.trim();
+            const email = document.getElementById('email').value.trim();
+            const subject = document.getElementById('subject').value.trim();
+            const message = document.getElementById('message').value.trim();
+
+            if (!name || !email || !subject || !message) {
+                alert('Please fill in all fields');
+                return;
+            }
+
+            const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+            if (!emailRegex.test(email)) {
+                alert('Please enter a valid email address');
+                return;
+            }
+
+            try {
+                const response = await fetch(contactForm.action, {
                     method: 'POST',
-                    body: formData,
-                    headers: {
-                        'Accept': 'application/json'
-                    }
-                })
-                .then(response => {
-                    if (response.ok) {
-                        // Show success message
-                        formSuccess.classList.add('show');
-                        contactForm.reset();
-                        
-                        // Hide success message after 5 seconds
-                        setTimeout(() => {
-                            formSuccess.classList.remove('show');
-                        }, 5000);
-                    } else {
-                        throw new Error('Form submission failed');
-                    }
-                })
-                .catch(error => {
-                    console.error('Error:', error);
-                    alert('There was a problem submitting your form. Please try again later.');
+                    body: new FormData(contactForm),
+                    headers: { 'Accept': 'application/json' }
                 });
-            });
+
+                if (response.ok) {
+                    formSuccess.classList.add('show');
+                    contactForm.reset();
+
+                    setTimeout(() => {
+                        formSuccess.classList.remove('show');
+                    }, 5000);
+                } else {
+                    alert('Form submission failed. Please try again.');
+                }
+            } catch (err) {
+                console.error(err);
+                alert('Network error. Please try again later.');
+            }
         });
+    });
     </script>
+
 </body>
 </html> 

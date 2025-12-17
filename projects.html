@@ -41,12 +41,16 @@
         <section class="projects-hero">
             <div class="container">
                 <h1 class="section-title" style="margin-top: 20px;">My Projects</h1>
-                <p class="section-subtitle">Welcome to my personal portfolio — a curated showcase of my projects, technical journey, and contributions. Here, you'll find the applications I've built using technologies like Django, React.js and Node.js along with hands-on work in backend development and API integration.</p>
-                <p class="section-subtitle">Each project is a testament to my passion for problem-solving and my dedication to delivering high-quality solutions. Each project represents not just the final product, but the process behind it — from debugging complex backend logic to implementing responsive UIs, and even learning to leverage AI tools like GitHub Copilot and Grok for faster development and problem-solving.</p>
-                    
-                <p class="section-subtitle">I’m continuously evolving as a developer, and this space reflects that growth. Whether it's a full-stack application, a mobile app, or a hackathon project, I’ve documented my thought process, tools used, and challenges faced in building each one.</p>
-
-                <p class="section-subtitle">This portfolio is more than just a collection — it's a living record of how I learn, build, and improve.</p>
+                <p class="section-subtitle">
+                    This page highlights a few projects where I’ve focused on <strong>backend engineering</strong>
+                    and <strong>GenAI / RAG systems</strong>—from AI chat platforms to document and web‑based
+                    assistants, and a production‑style academic portal.
+                </p>
+                <p class="section-subtitle">
+                    Each entry summarises the <strong>problem</strong>, what I actually built, and the
+                    <strong>engineering decisions</strong> that mattered, so you can quickly understand how I think
+                    about system design and implementation.
+                </p>
             </div>
         </section>
 
@@ -63,82 +67,112 @@
         <section class="projects-showcase">
             <div class="container">
                 <div class="projects-grid">
-                 <div class="project-card">
+                <div class="project-card">
                     <div class="project-image">
-                        <img src="./assets/VortexReg.png" alt="Project 1">
+                        <img src="./assets/Lumin_logo.png" alt="Lumin – AI Chat Assistant">
                     </div>
                     <div class="project-info">
-                        <h3>VortexReg</h3>
-                        <p>A Interactive Course Registration Platform for IIIT Vadodara Students. It allows students to register for courses, view their schedules, and track their progress in real-time with Gmail Communication and User Friendly Interface</p>
+                        <h3>Lumin – AI Chat Assistant</h3>
+                        <p>
+                            <strong>Problem:</strong> One‑off chat demos don’t scale when you need multiple tools,
+                            models and workflows behind a single interface.
+                            <br>
+                            <strong>What I built:</strong> A full‑stack chat platform with a <strong>React</strong>
+                            frontend and <strong>FastAPI</strong> backend that routes user messages through a modular
+                            LangChain/LangGraph graph, with MongoDB for session and message history.
+                            <br>
+                            <strong>Engineering decisions:</strong> Clear separation between UI, API, and tool layer;
+                            typed FastAPI routes; and a pluggable tool registry so new tools/flows can be added without
+                            rewriting the core application.
+                        </p>
                         <div class="project-tags">
-                            <span>HTML</span>
-                            <span>BootStrap</span>
+                            <span>React</span>
+                            <span>FastAPI</span>
+                            <span>MongoDB</span>
+                            <span>LangChain / LangGraph</span>
+                        </div>
+                        <a href="https://github.com/sbndAbhijeet/ChatMe" target="_blank" class="btn btn-small">View Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/web_query.jpg" alt="WebQuery – RAG Browser Assistant">
+                    </div>
+                    <div class="project-info">
+                        <h3>WebQuery – RAG Browser Assistant</h3>
+                        <p>
+                            <strong>Problem:</strong> Reading long documentation pages and FAQs is slow when you only
+                            need specific answers.
+                            <br>
+                            <strong>What I built:</strong> A <strong>Manifest v3</strong> browser extension that lets
+                            users chat on top of any supported documentation page, backed by a <strong>FastAPI</strong>
+                            RAG service with <strong>Qdrant</strong> for vector storage and BeautifulSoup for scraping.
+                            <br>
+                            <strong>Engineering decisions:</strong> Per‑site collections in Qdrant, chunking tuned to
+                            documentation structure, and a thin background script that keeps all heavy work on the
+                            backend API.
+                        </p>
+                        <div class="project-tags">
+                            <span>Chrome Extension (MV3)</span>
+                            <span>FastAPI</span>
+                            <span>Qdrant</span>
+                            <span>BeautifulSoup</span>
+                        </div>
+                        <a href="https://github.com/sbndAbhijeet/WebQuery_RAG" target="_blank" class="btn btn-small">View Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/PDFQuery.png" alt="PDFQuery – Ask Questions">
+                    </div>
+                    <div class="project-info">
+                        <h3>PDFQuery – Ask Questions</h3>
+                        <p>
+                            <strong>Problem:</strong> Searching through long PDFs manually is slow and error‑prone.
+                            <br>
+                            <strong>What I built:</strong> A <strong>Streamlit</strong> frontend and
+                            <strong>FastAPI</strong> backend that let users upload PDFs, index them into
+                            <strong>Qdrant</strong>, and query them using a RAG pipeline, with answers streamed back
+                            to the UI.
+                            <br>
+                            <strong>Engineering decisions:</strong> Containerised Qdrant via <strong>Docker</strong>,
+                            separate services for UI and API, and simple configuration to swap between different LLM
+                            providers without changing the retrieval layer.
+                        </p>
+                        <div class="project-tags">
+                            <span>Streamlit</span>
+                            <span>FastAPI</span>
+                            <span>Qdrant</span>
+                            <span>Docker</span>
+                        </div>
+                        <a href="https://github.com/sbndAbhijeet/PDFQuery_Rag" target="_blank" class="btn btn-small">View Repo</a>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="./assets/VortexReg.png" alt="Course Registration System – IIIT Vadodara">
+                    </div>
+                    <div class="project-info">
+                        <h3>Course Registration System – IIIT Vadodara</h3>
+                        <p>
+                            <strong>Problem:</strong> Needed a system that captures the real course registration
+                            workflow used at IIIT Vadodara, with different roles and approval steps.
+                            <br>
+                            <strong>What I built:</strong> A <strong>Django</strong> web application with
+                            role‑based dashboards for students and faculty, session‑based authentication, and Gmail
+                            notifications for registration actions.
+                            <br>
+                            <strong>Engineering decisions:</strong> Used Django’s auth and permission system for
+                            roles, separated student/faculty views, and designed the models around the institute’s
+                            real processes rather than a toy example.
+                        </p>
+                        <div class="project-tags">
                             <span>Django</span>
+                            <span>HTML / Bootstrap</span>
                             <span>SQLite</span>
+                            <span>Gmail API</span>
                         </div>
-                        <a href="projects.html" class="btn btn-small">View Details</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./assets/IntelliDiary.png" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>IntelliDiary</h3>
-                        <p>A Personalized Journaling Application, where users can track their thoughts, emotions, and memories with the help of AI/ML model for mood tracking</p>
-                        <div class="project-tags">
-                            <span>Django</span>
-                            <span>PyQt</span>
-                            <span>Pretrained AI Model</span>
-                            <span>SQLite</span>
-                        </div>
-                        <a href="projects.html" class="btn btn-small">View Details</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./assets/Blog.png" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>WebBlog</h3>
-                        <p>A Basic CRUD Blog Application. It allows users to create, read, update, and delete blog posts, showcasing basic and crucial CRUD operations</p>
-                        <div class="project-tags">
-                            <span>JavaScript</span>
-                            <span>HTML/Bootstrap</span>
-                            <span>Express/EJS</span>
-                        </div>
-                        <a href="projects.html" class="btn btn-small">View Details</a>
-                    </div>
-                </div>
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./assets/Remaster.png" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>Game Texture Enhancement Tool</h3>
-                        <p>A tool for enhancing legacy game textures using AI/ML models. This application helps game designers recreate and enhance texture packs for remastered games.</p>
-                        <div class="project-tags">
-                            <span>JavaScript</span>
-                            <span>HTML/Bootstrap</span>
-                            <span>Express/EJS</span>
-                        </div>
-                        <a href="projects.html" class="btn btn-small">View Details</a>
-                    </div>
-                </div>
-                
-                <div class="project-card">
-                    <div class="project-image">
-                        <img src="./assets/EazyDine.png" alt="Project 2">
-                    </div>
-                    <div class="project-info">
-                        <h3>EazyDine</h3>
-                        <p>Ongoing... Just started still in Designing phase. Aims to be a full stack application, with features like Order Tracking and Payment Gateway and advanced features like AI Chatbot</p>
-                        <div class="project-tags">
-                            <span>Django</span>
-                            <span>HTML/Bootstrap</span>
-                            <span>(Future Goal) Order Tracking and Payment Gateway</span>
-                        </div>
-                        <a href="projects.html" class="btn btn-small">View Details</a>
+                        <a href="https://github.com/sbndAbhijeet/Course-Registration" target="_blank" class="btn btn-small">View Repo</a>
                     </div>
                 </div>
 

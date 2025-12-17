@@ -41,41 +41,71 @@
         <section class="hero">
             <div class="hero-content">
                 <div class="hero-text">
-                    <h1 class="hero-title">Hello, I'm <span class="highlight">Abhijeet</span></h1>
-                    <h2 class="hero-subtitle">Web Developer & Designer</h2>
-                    <p class="hero-description">I create beautiful, responsive websites with modern technologies and best practices.</p>
+                    <h1 class="hero-title">Hi, I'm <span class="highlight">Abhijeet</span></h1>
+                    <h2 class="hero-subtitle">
+                        Backend & GenAI Engineer • Computer Science @ IIIT Vadodara
+                    </h2>
+
+                    <p class="hero-description">
+                        I build <strong>backend systems and AI-powered applications</strong> with a focus on
+                        <strong>FastAPI, Django, MongoDB</strong> and
+                        <strong>Retrieval-Augmented Generation (RAG)</strong> using
+                        <strong>LangChain</strong> and <strong>LangGraph</strong>.
+                        Currently working on <strong>Lumin</strong>, a modular chat platform that routes
+                        requests across different tools and models through a clean API layer.
+                    </p>
+
                     <div class="hero-buttons">
-                        <a href="projects.html" class="btn btn-primary">View My Work</a>
-                        <a href="contact.html" class="btn btn-secondary">Contact Me</a>
+                        <a href="projects.html" class="btn btn-primary">View Projects</a>
+                        <a href="assets/Resume.pdf" class="btn btn-secondary" target="_blank">
+                            Download Resume
+                        </a>
                     </div>
                 </div>
+
                 <div class="hero-image">
-                    <img src="./assets/Profile_photo.jpg" alt="Abhijeet - Profile Photo">
+                    <img src="./assets/Profile_photo.jpg" alt="Abhijeet - Software Engineer">
                 </div>
             </div>
         </section>
 
         <!-- Featured Skills Section -->
         <section class="featured-skills">
-            <h2 class="section-title">My Expertise</h2>
+            <h2 class="section-title">Core Expertise</h2>
+
             <div class="skills-grid">
                 <div class="skill-card">
-                    <i class="fas fa-code"></i>
-                    <h3>Web Development</h3>
-                    <p>Building responsive and interactive websites using modern frameworks and technologies.</p>
+                    <i class="fas fa-server"></i>
+                    <h3>Backend & APIs</h3>
+                    <p>
+                        Designing and implementing backend services in <strong>FastAPI</strong> and
+                        <strong>Django</strong>, with clear API boundaries, authentication, and
+                        request/response validation suitable for production environments.
+                    </p>
                 </div>
+
                 <div class="skill-card">
-                    <i class="fas fa-mobile-alt"></i>
-                    <h3>Responsive Design</h3>
-                    <p>Creating websites that look great on all devices, from mobile to desktop.</p>
+                    <i class="fas fa-brain"></i>
+                    <h3>GenAI & RAG Systems</h3>
+                    <p>
+                        Building <strong>RAG pipelines</strong> over PDFs and web content using
+                        <strong>LangChain, LangGraph, Qdrant</strong> and commercial LLM APIs,
+                        with attention to chunking, retrieval quality, and tool orchestration.
+                    </p>
                 </div>
+
                 <div class="skill-card">
                     <i class="fas fa-database"></i>
-                    <h3>Data Structures</h3>
-                    <p>Proficient in implementing efficient data structures and algorithms.</p>
+                    <h3>Data & Core CS</h3>
+                    <p>
+                        Strong foundation in <strong>DSA, DBMS, OOP</strong>, and working with
+                        <strong>MongoDB</strong> and <strong>MySQL</strong>, enabling efficient
+                        data modelling and query design for real-world applications.
+                    </p>
                 </div>
             </div>
         </section>
+
 
         <!-- Featured Projects Section -->
         <section class="featured-projects">
@@ -83,47 +113,60 @@
             <div class="projects-grid">
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="./assets/VortexReg.png" alt="Project 1">
+                        <img src="./assets/Lumin_logo.png" alt="Lumin – AI Chat Assistant">
                     </div>
                     <div class="project-info">
-                        <h3>VortexReg</h3>
-                        <p>A Interactive Course Registration Platform for IIIT Vadodara Students</p>
+                        <h3>Lumin – AI Chat Assistant</h3>
+                        <p>
+                            Full‑stack AI chat platform with a <strong>FastAPI</strong> backend and
+                            <strong>React</strong> frontend, routing conversations to different tools
+                            and providers via a modular LangChain/LangGraph orchestration layer.
+                        </p>
                         <div class="project-tags">
-                            <span>HTML</span>
-                            <span>BootStrap</span>
-                            <span>Django</span>
-                            <span>SQLite</span>
+                            <span>React</span>
+                            <span>FastAPI</span>
+                            <span>MongoDB</span>
+                            <span>LangChain / LangGraph</span>
                         </div>
                         <a href="projects.html" class="btn btn-small">View Details</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="./assets/IntelliDiary.png" alt="Project 2">
+                        <img src="./assets/web_query.jpg" alt="WebQuery – RAG Browser Assistant">
                     </div>
                     <div class="project-info">
-                        <h3>IntelliDiary</h3>
-                        <p>A Personalized Journaling Application, where users can track their thoughts, emotions, and memories with the help of AI/ML model for mood tracking</p>
+                        <h3>WebQuery – RAG Browser Assistant</h3>
+                        <p>
+                            Manifest v3 browser extension that lets users ask questions directly on
+                            documentation pages, backed by a <strong>FastAPI</strong> RAG service
+                            using <strong>Qdrant</strong> and HTML parsing with BeautifulSoup.
+                        </p>
                         <div class="project-tags">
-                            <span>Django</span>
-                            <span>PyQt</span>
-                            <span>Pretrained AI Model</span>
-                            <span>SQLite</span>
+                            <span>Chrome Extension</span>
+                            <span>FastAPI</span>
+                            <span>Qdrant</span>
+                            <span>RAG</span>
                         </div>
                         <a href="projects.html" class="btn btn-small">View Details</a>
                     </div>
                 </div>
                 <div class="project-card">
                     <div class="project-image">
-                        <img src="./assets/EazyDine.png" alt="Project 2">
+                        <img src="./assets/VortexReg.png" alt="Course Registration System">
                     </div>
                     <div class="project-info">
-                        <h3>EazyDine</h3>
-                        <p>Ongoing... Just started still in Designing phase</p>
+                        <h3>Course Registration System – IIIT Vadodara</h3>
+                        <p>
+                            Production‑style portal that mirrors the institute’s course registration
+                            flow with role‑based access, session authentication and email
+                            notifications for students and faculty.
+                        </p>
                         <div class="project-tags">
                             <span>Django</span>
-                            <span>HTML/Bootstrap</span>
-                            <span>(Future Goal) Order Tracking and Payment Gateway</span>
+                            <span>HTML / Bootstrap</span>
+                            <span>SQLite</span>
+                            <span>Gmail API</span>
                         </div>
                         <a href="projects.html" class="btn btn-small">View Details</a>
                     </div>
@@ -136,7 +179,7 @@
 
         <!-- Contact CTA Section -->
         <section class="contact-cta">
-            <div class="cta-content" style="margin-left: 20px;">
+            <div class="cta-content">
                 <h2>Let's Work Together</h2>
                 <p>I'm always open to discussing new projects, creative ideas, or opportunities to be part of your visions.</p>
                 <a href="contact.html" class="btn btn-primary">Get In Touch</a>

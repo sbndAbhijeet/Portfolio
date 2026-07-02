@@ -27,7 +27,7 @@ export const Projects: React.FC = () => {
       engineering: 'Built a FastAPI backend with MongoDB and a responsive React interface. Implemented workflow-based routing for tool invocation and designed a Blog-Note system to organize useful AI responses.',
       tags: ['React', 'FastAPI', 'MongoDB', 'LangChain', 'LangGraph'],
       repoUrl: 'https://github.com/sbndAbhijeet/ChatMe',
-      imgUrl: '/assets/Lumin_logo.png',
+      imgUrl: './assets/Lumin_logo.png',
     },
     {
       title: 'WebQuery – RAG Web Assistant',
@@ -37,7 +37,7 @@ export const Projects: React.FC = () => {
       engineering: 'Implemented a Retrieval-Augmented Generation (RAG) pipeline using FastAPI, embeddings, and Qdrant vector search. Structured per-site collections with custom BeautifulSoup parsing.',
       tags: ['FastAPI', 'Qdrant', 'LangChain', 'JavaScript', 'Chrome Extension'],
       repoUrl: 'https://github.com/sbndAbhijeet/WebQuery_RAG',
-      imgUrl: '/assets/web_query.jpg',
+      imgUrl: './assets/web_query.jpg',
     },
     {
       title: 'PDFQuery – Ask Questions',
@@ -47,7 +47,7 @@ export const Projects: React.FC = () => {
       engineering: 'Containerized Qdrant via Docker, separated UI and API services, and designed configuration layers to swap between LLM providers (OpenAI, Gemini).',
       tags: ['FastAPI', 'Qdrant', 'Streamlit', 'Docker', 'RAG'],
       repoUrl: 'https://github.com/sbndAbhijeet/PDFQuery_Rag',
-      imgUrl: '/assets/PDFQuery.png',
+      imgUrl: './assets/PDFQuery.png',
     },
     {
       title: 'Course Registration System',
@@ -57,7 +57,7 @@ export const Projects: React.FC = () => {
       engineering: 'Used Django, SQLite, and Bootstrap. Integrated session-based authentication, semester-based course filtering, and automated Gmail notifications for approvals.',
       tags: ['Django', 'Python', 'SQLite', 'Bootstrap', 'Gmail API'],
       repoUrl: 'https://github.com/sbndAbhijeet/Course-Registration',
-      imgUrl: '/assets/VortexReg.png',
+      imgUrl: './assets/VortexReg.png',
     },
   ];
 

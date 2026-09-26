@@ -197,7 +197,7 @@ Which one would you like to hear more about?`;
     }
 
     // Fallback response - STRICT restriction to resume only
-    return "I am a local helper bot trained *strictly* on Abhijeet's resume, so I don't know about other topics. Feel free to ask about his WETEC internship, programming languages, LeetCode profi[...]
+    return "I am a local helper bot trained *strictly* on Abhijeet's resume, so I don't know about other topics. Feel free to ask about his WETEC internship, programming languages, LeetCode profile, projects, or education!";
   };
 
   return (

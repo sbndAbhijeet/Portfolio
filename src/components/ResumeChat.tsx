@@ -193,11 +193,11 @@ Which one would you like to hear more about?`;
     // Resume file intents
     if (cleanQuery.includes('resume') || cleanQuery.includes('cv') || cleanQuery.includes('download')) {
       return `You can view or download Abhijeet's complete resume PDF here: 
-👉 [Abhijeet's Resume (Google Drive)](https://drive.google.com/file/d/1W0WOGxeGFMCFcFQ8hwB9hfqwYsHoNbQZ/view)`;
+👉 [Abhijeet's Resume (Google Drive)](https://drive.google.com/file/d/1q44MY85pH2QRfGce_Op4jjCio_l1McKZ/view?usp=sharing)`;
     }
 
     // Fallback response - STRICT restriction to resume only
-    return "I am a local helper bot trained *strictly* on Abhijeet's resume, so I don't know about other topics. Feel free to ask about his WETEC internship, programming languages, LeetCode profile, or projects like Lumin!";
+    return "I am a local helper bot trained *strictly* on Abhijeet's resume, so I don't know about other topics. Feel free to ask about his WETEC internship, programming languages, LeetCode profi[...]
   };
 
   return (
